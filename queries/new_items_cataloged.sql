@@ -23,6 +23,7 @@ SELECT effective_location_name,
 	 LEFT JOIN folio_derived.item_administrative_notes AS ian ON ie.item_id = ian.item_id
 	 WHERE ihi.cataloged_date::date >= start_date
          AND ihi.cataloged_date::date < end_date
+         AND ian.administrative_note ~ 'newbooks.*'
 $$
 LANGUAGE SQL
 STABLE
