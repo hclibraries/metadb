@@ -1,5 +1,5 @@
 {
-    "displayName": "Items Cataloged by Date Range",
+    "displayName": "New Items Cataloged by Date Range",
     "description": "Lists items whose cataloged date falls within a given date range, showing effective location, call number, holdings type, title, barcode, and administrative note.",
     "instructions": "Choose a start and end date for the item-cataloging period.",
     "parameters": [
