@@ -24,6 +24,7 @@ SELECT effective_location_name,
 	 WHERE ihi.cataloged_date::date >= start_date
          AND ihi.cataloged_date::date < end_date
          AND ian.administrative_note ~ 'newbooks.*'
+         AND effective_location_name LIKE 'Dinand%'
 $$
 LANGUAGE SQL
 STABLE
