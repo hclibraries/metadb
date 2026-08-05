@@ -14,15 +14,15 @@ $$
 SELECT effective_location_name,
 	   effective_call_number,
 	   holdings_type_name,
-	   cataloged_date,
+	   cataloged_date::date,
 	   index_title,
 	   ihi.barcode,
 	   ian.administrative_note
 	 FROM folio_derived.items_holdings_instances AS ihi
 	 LEFT JOIN folio_derived.item_ext AS ie ON ie.item_id = ihi.item_id
 	 LEFT JOIN folio_derived.item_administrative_notes AS ian ON ie.item_id = ian.item_id
-	 WHERE ihi.cataloged_date >= start_date
-         AND ihi.cataloged_date < end_date
+	 WHERE ihi.cataloged_date::date >= start_date
+         AND ihi.cataloged_date::date < end_date
 $$
 LANGUAGE SQL
 STABLE
