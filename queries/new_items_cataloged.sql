@@ -1,5 +1,5 @@
---metadb:function items_cataloged_date_range
-CREATE OR REPLACE FUNCTION items_cataloged_date_range (
+--metadb:function new_items_cataloged
+CREATE OR REPLACE FUNCTION new_cataloged (
 	start_date date DEFAULT '2000-01-01',
 	end_date date DEFAULT '2050-01-01')
 RETURNS TABLE(
